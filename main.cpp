@@ -1,35 +1,43 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
+
+//function prototype
+double distance(int ,int,int,int);
+
+
 int main()
 {
-    double merchandiseCost,salaryOfEmployees,yearlyRent,electricityCost;
+    cout << "Calculate the euclidian distance between two points" << endl;
 
-    cout << "Enter the total cost of merchandise:" << endl;
-    cin>>merchandiseCost;
 
-    cout<< "Enter salary of employees:" << endl;
-    cin>>salaryOfEmployees;
+    int x1,x2,y1,y2;
+    cout << "Enter the value of x1:" << endl;
+    cin>>x1;
+    cout  << "Enter the value of x1:" << endl;
+    cin>>x2;
+    cout  << "Enter the value of x1:" << endl;
+    cin>>y1;
+    cout  << "Enter the value of x1:" << endl;
+    cin>>y2;
 
-    cout<< "Enter the yearly rent:" << endl;
-    cin>>yearlyRent;
 
-    cout<< "Enter the cost of electricity:" << endl;
-    cin>>electricityCost;
-
-    double Expenses;
-    Expenses = merchandiseCost+salaryOfEmployees+yearlyRent+electricityCost;
-
-    double desiredProfit = merchandiseCost*0.1;
-
-    double newNetProfit = desiredProfit/0.85;
-
-    double merchandiseMarkedUp;
-    merchandiseMarkedUp = (newNetProfit+Expenses)/merchandiseCost;
-
-    cout<< "The total meerchandise cost is:" << merchandiseMarkedUp << endl;
-
+    double results;
+    results=distance(x1,x2,y1,y2);
+    cout<< "The distance between point 1 and point 2 is:" <<results<< endl;
 
     return 0;
+}
+
+
+  double distance (int x1,int x2,int y1, int y2) {
+
+    int k,r;
+    k=x2-x1;
+    r=y2-y1;
+
+   return sqrt(pow(k,2) + pow(r,2));
+
 }
